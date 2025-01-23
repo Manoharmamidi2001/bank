@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Bank</title>
+    <style>
+        .card:hover{
+            border-color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body style="background-color: orange;">
+    <div class="container-fluid p-4">
+        <div class="row">
+            <div class="col-sm-4 d-flex justify-content-center p-4">
+                <div class="card p-4" style="width: 350px; border-width: 5px; border-radius: 20px">
+                    <h1 style="text-align:center;">Account Details</h1>
+                    <img src="./account.png" class="img-fluid" alt="account">
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-outline-dark" style="width: 150px;" onclick="goAccount()">View details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 d-flex justify-content-center p-4">
+                <div class="card p-4" style="width: 350px; border-width: 5px; border-radius: 20px">
+                    <h1 style="text-align: center;">Credit</h1>
+                    <img src="./add.png" class="img-fluid" alt="credit">
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-outline-dark" style="width: 150px;" onclick="goCredit()">Add Money</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 d-flex justify-content-center p-4">
+                <div class="card p-4" style="width: 350px; border-width: 5px; border-radius: 20px">
+                    <h1 style="text-align: center;">Debit</h1>
+                    <img src="./withdraw.png" class="img-fluid" alt="debit">
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-outline-dark" style="width: 150px;" onclick="goDebit()">Withdraw Money</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row bg-black fixed-bottom">
+        <div class="d-flex justify-content-center">
+            <p style="color: white;">©By Manohar_Mamidi_2110</p>
+        </div>
+    </div>
+    <script>
+        var pin = 1234;
+        
+        function goAccount(){
+            let userPin = +prompt("Hint: 1234");
+            if(userPin === pin){
+                alert('Success');
+                window.location.href='./account.html'
+            }
+            else{
+                alert('Incorrect Pin')
+            }
+        }
+        function goCredit(){
+            let userPin = +prompt("Hint: 1234");
+            if(userPin === pin){
+                alert('Success');
+                window.location.href='./credit.html'
+            }
+            else{
+                alert('Incorrect Pin')
+            }
+        }
+        function goDebit(){
+            let userPin = +prompt("Hint: 1234");
+            if(userPin === pin){
+                alert('Success');
+                window.location.href='./debit.html'
+            }
+            else{
+                alert('Incorrect Pin')
+            }
+        }
+    </script>
+</body>
+</html>
